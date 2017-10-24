@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class DestroyShot : MonoBehaviour {
 
-	void OnColliderEnter2D(Collider2D other)
+	public void Update()
     {
-        Destroy(other.gameObject);
+        if (transform.position.y > 6)
+        {
+            DestroyObject(gameObject);
+        }
     }
 }
