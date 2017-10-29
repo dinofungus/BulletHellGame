@@ -15,8 +15,12 @@ public class RatDie : MonoBehaviour {
         
 	}
 
-    void OnColliderEnter2D(Collider2D other)
-    {        
-        Destroy(gameObject);
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "PlayerShot")
+        {
+            DestroyObject(gameObject);
+        }        
+        
     }
 }
