@@ -20,6 +20,7 @@ public class RatSpawn : MonoBehaviour {
         {
             Instantiate(rat, position, transform.rotation);
             elapsed -= spawnRate;
+            spawnRate = spawnRate * 0.95f;
         }
 	}
 
